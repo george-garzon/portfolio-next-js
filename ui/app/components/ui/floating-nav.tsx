@@ -11,12 +11,17 @@ import {
     Moon01Icon,
     SourceCodeIcon,
 } from "@hugeicons/core-free-icons";
-import Link from 'next/link'
+import Link from "next/link";
 import {
     Tooltip,
     TooltipContent,
     TooltipTrigger,
 } from "@/app/components/ui/tooltip";
+
+type NavItem =
+    | { type: "link"; label: string; href: string; icon: React.ReactNode }
+    | { type: "action"; label: string; action: () => void; icon: React.ReactNode }
+    | { type: "divider" };
 
 export default function FloatingNav() {
     const containerRef = useRef<HTMLDivElement>(null);
@@ -36,35 +41,42 @@ export default function FloatingNav() {
         document.documentElement.classList.toggle("dark");
     };
 
-    const items = [
+    // ❗ Build items *inside* component so darkMode + toggleDark exist
+    const items: NavItem[] = [
         {
+            type: "link",
             label: "Home",
             href: "/",
             icon: <HugeiconsIcon icon={Home01Icon} size={20} />,
         },
         {
+            type: "link",
             label: "Projects",
             href: "/projects",
             icon: <CodeIcon />,
         },
-        "divider",
+        { type: "divider" },
         {
+            type: "link",
             label: "GitHub",
             href: "https://github.com/george-garzon",
             icon: <GitHubIcon />,
         },
         {
+            type: "link",
             label: "LinkedIn",
             href: "https://linkedin.com/in/georgegarzon",
             icon: <LinkedInIcon />,
         },
         {
+            type: "link",
             label: "X",
             href: "https://x.com",
             icon: <XIcon />,
         },
-        "divider",
+        { type: "divider" },
         {
+            type: "action",
             label: darkMode ? "Light Mode" : "Dark Mode",
             action: toggleDark,
             icon: darkMode ? <SunIcon /> : <MoonIcon />,
@@ -72,7 +84,7 @@ export default function FloatingNav() {
     ];
 
     return (
-        <div className="z-1 pointer-events-none fixed inset-x-0 bottom-0 z-30 mb-4 flex justify-center">
+        <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mb-4 flex justify-center">
             <div className="fixed bottom-0 inset-x-0 h-16 bg-background/40 backdrop-blur-xl [-webkit-mask-image:linear-gradient(to_top,black,transparent)]" />
 
             <div
@@ -80,22 +92,21 @@ export default function FloatingNav() {
                 onMouseMove={handleMove}
                 onMouseLeave={handleLeave}
                 className="
-          z-1 pointer-events-auto flex items-center gap-1 px-3 py-2
-          bg-background rounded-full border
-          shadow-[0_0_0_1px_rgba(0,0,0,.03),0_3px_6px_rgba(0,0,0,.05),0_20px_40px_rgba(0,0,0,.06)]
-          dark:border-white/10
-        "
+                    pointer-events-auto flex items-center gap-1 px-3 py-2
+                    bg-background rounded-full border
+                    shadow-[0_0_0_1px_rgba(0,0,0,.03),0_3px_6px_rgba(0,0,0,.05),0_20px_40px_rgba(0,0,0,.06)]
+                    dark:border-white/10
+                "
             >
                 {items.map((item, i) =>
-                    item === "divider" ? (
+                    item.type === "divider" ? (
                         <div key={i} className="w-px h-8 bg-border opacity-50 mx-1" />
                     ) : (
                         <LiquidItem key={i} index={i} mouseX={mouseX}>
                             <Tooltip>
                                 <TooltipTrigger asChild>
-                                    {"href" in item ? (
+                                    {item.type === "link" ? (
                                         item.href.startsWith("http") ? (
-                                            // External link
                                             <Link
                                                 href={item.href}
                                                 target="_blank"
@@ -104,14 +115,12 @@ export default function FloatingNav() {
                                                 {item.icon}
                                             </Link>
                                         ) : (
-                                            // Internal link
                                             <Link href={item.href}>{item.icon}</Link>
                                         )
                                     ) : (
                                         <button onClick={item.action}>{item.icon}</button>
                                     )}
                                 </TooltipTrigger>
-
                                 <TooltipContent>
                                     <p>{item.label}</p>
                                 </TooltipContent>
@@ -163,7 +172,7 @@ function LiquidItem({
 }
 
 /* ------------------------------------------------------------ */
-/* SVG Icons */
+/* Icons */
 /* ------------------------------------------------------------ */
 
 function GitHubIcon() {
