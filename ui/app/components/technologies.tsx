@@ -2,7 +2,20 @@ import FadeIn from "./ui/fade-in";
 import { Badge } from "./ui/badge";
 
 export default function Technologies() {
-    const list = ["Azure", "Docker", "PostgreSQL", "Redis", "Terraform", "Jenkins"];
+    const list = [
+        "Linux",
+        "Ubuntu",
+        "Docker",
+        "Git",
+        "NPM",
+        "Postman",
+        "Swagger / OpenAPI",
+        "Selenium",
+        "Jenkins",
+        "MySQL",
+        "MariaDB",
+        "MongoDB"
+    ];
 
     return (
         <section id="technologies">

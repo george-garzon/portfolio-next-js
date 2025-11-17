@@ -1,41 +1,34 @@
-# ----------------------------------------------------------
-# 1. Builder Image
-# ----------------------------------------------------------
+# 1) Builder
 FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Install system deps
 RUN apk add --no-cache libc6-compat
 
-# Copy package files
 COPY package.json package-lock.json* ./
-
-# Install deps
 RUN npm install
 
-# Copy the rest of the app
 COPY . .
-
-# Create standalone build
 RUN npm run build
 
 
-# ----------------------------------------------------------
-# 2. Runner Image
-# ----------------------------------------------------------
+# 2) Runner
 FROM node:20-alpine AS runner
 WORKDIR /app
 
-ENV NODE_ENV production
+ENV NODE_ENV=production
 
-# Copy standalone output
-COPY --from=builder /app/.next/standalone ./
-# Static assets
-COPY --from=builder /app/.next/static ./.next/static
-# Public assets
+# Copy the full .next folder (Next.js 16 requires it)
+COPY --from=builder /app/.next ./.next
+
+# Copy node_modules (needed for the server)
+COPY --from=builder /app/node_modules ./node_modules
+
+# Copy public folder
 COPY --from=builder /app/public ./public
+
+COPY package.json ./
 
 EXPOSE 3000
 
-CMD ["node", "server.js"]
+CMD ["npm", "start"]

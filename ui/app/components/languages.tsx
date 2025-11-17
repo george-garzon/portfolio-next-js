@@ -2,8 +2,15 @@ import FadeIn from "./ui/fade-in";
 import { Badge } from "./ui/badge";
 
 export default function Languages() {
-    const list = ["Python", "C/C++", "TypeScript", "Go", "SQL"];
-
+    const list = [
+        "JavaScript",
+        "TypeScript",
+        "Python",
+        "PHP",
+        "Bash",
+        "HTML5",
+        "CSS3",
+    ];
     return (
         <section id="languages">
             <div className="flex min-h-0 flex-col gap-y-3">

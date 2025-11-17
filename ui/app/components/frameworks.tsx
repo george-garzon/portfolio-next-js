@@ -2,7 +2,19 @@ import FadeIn from "./ui/fade-in";
 import { Badge } from "./ui/badge";
 
 export default function Frameworks() {
-    const list = ["PyTorch", "FastAPI", "Express", "React", "Svelte"];
+    const list = [
+        "Next.js",
+        "React",
+        "Vue.js",
+        "Tailwind CSS",
+        "CodeIgniter",
+        "Node.js",
+        "Fastify",
+        "Express",
+        "Flask",
+        "Django",
+        ".NET"
+    ];
 
     return (
         <section id="frameworks">

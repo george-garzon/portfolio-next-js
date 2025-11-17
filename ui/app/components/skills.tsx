@@ -2,6 +2,19 @@ import FadeIn from "./ui/fade-in";
 import { Badge } from "./ui/badge";
 
 export default function Skills() {
+    const list = [
+        "Web Development",
+        "API Development",
+        "Database Design",
+        "DevOps / CI/CD",
+        "Automation Testing",
+        "UI/UX Implementation",
+        "Containerization",
+        "System Design",
+        "Version Control (Git)",
+        "Linux Administration"
+    ];
+
     return (
         <section id="skills">
             <div className="flex min-h-0 flex-col gap-y-3">
@@ -10,13 +23,11 @@ export default function Skills() {
                 </FadeIn>
 
                 <div className="flex flex-wrap gap-1">
-                    {["Machine Learning", "Algorithms", "Backend", "Firmware", "System Design"].map(
-                        (item) => (
-                            <FadeIn key={item}>
-                                <Badge>{item}</Badge>
-                            </FadeIn>
-                        )
-                    )}
+                    {list.map((item) => (
+                        <FadeIn key={item}>
+                            <Badge>{item}</Badge>
+                        </FadeIn>
+                    ))}
                 </div>
             </div>
         </section>
