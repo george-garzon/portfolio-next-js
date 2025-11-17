@@ -10,33 +10,33 @@ const workExperience = [
         href: "https://www.olympiapharmacy.com/",
         img: "/olympiapharma_logo.jpg",
         role: "Senior Full Stack Developer",
-        dates: "2024 - Present",
-        summary: "Custom PHP, CodeIgniter and Next.js portal modernization.",
+        dates: "2025 - Present",
+        summary: "Architecting and modernizing the Olympia Ordering Portal by transforming a legacy LAMP/CodeIgniter 3 system into a scalable, high-performance platform using PHP, optimized SQL, AWS, Cloudflare, and a new Next.js + Tailwind component-driven frontend.",
     },
     {
         company: "Olympia Pharmacy",
         href: "https://www.olympiapharmacy.com/",
         img: "/olympiapharma_logo.jpg",
         role: "Quality Assurance Developer",
-        dates: "2024 - Present",
-        summary: "Custom PHP, CodeIgniter and Next.js portal modernization.",
+        dates: "2024 - 2025",
+        summary: "Delivered high-impact QA efficiency boosts, and internal tools—improving stability, speeding onboarding, and optimizing prescription printing, order tracking, and API reliability across the Olympia Ordering Portal.",
     },
     {
         company: "Homeport Travel",
         href: "https://www.homeporttravel.com/",
         img: "/hp.jpg",
-        role: "Quality Assurance Developer",
-        dates: "2024 - Present",
-        summary: "Custom PHP, CodeIgniter and Next.js portal modernization.",
+        role: "Full Stack Developer",
+        dates: "2022 - Present",
+        summary: "Built and containerized Homeport’s full-stack platform using React, Node.js, and CodeIgniter 4, integrating real-time cruise data, modular UI systems, business intelligence dashboards, and AWS SES—delivering a scalable, data-driven travel application.",
     },
     {
         company: "Electric Supply, Inc.",
         img: "/esi.jpg",
         role: "Ecommerce Developer",
-        dates: "September 2021 - May 2024",
+        dates: "June 2020 - August 2024",
         summary:
-            "HTML, CSS, and JS.",
-    },
+            "Developed responsive, brand-aligned ecommerce pages and UI components using HTML, CSS, and Bootstrap, while improving product data structure, accessibility, and marketing workflows through cross-team collaboration and Mailchimp integrations.",
+    }
 
 ];
 

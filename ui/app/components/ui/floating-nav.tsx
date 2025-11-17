@@ -41,7 +41,6 @@ export default function FloatingNav() {
         document.documentElement.classList.toggle("dark");
     };
 
-    // ❗ Build items *inside* component so darkMode + toggleDark exist
     const items: NavItem[] = [
         {
             type: "link",
@@ -92,7 +91,7 @@ export default function FloatingNav() {
                 onMouseMove={handleMove}
                 onMouseLeave={handleLeave}
                 className="
-                    pointer-events-auto flex items-center gap-1 px-3 py-2
+                    z-1 pointer-events-auto flex items-center gap-1 px-3 py-2
                     bg-background rounded-full border
                     shadow-[0_0_0_1px_rgba(0,0,0,.03),0_3px_6px_rgba(0,0,0,.05),0_20px_40px_rgba(0,0,0,.06)]
                     dark:border-white/10
