@@ -1,8 +1,16 @@
 function ProjectCard({ project }: { project: any }) {
+    // A tiny wrapper helper
+    const MediaWrapper = ({ children }) =>
+        project.slug ? (
+            <a href={`/projects/${project.slug}`}>{children}</a>
+        ) : (
+            <div>{children}</div>
+        );
+
     return (
         <div className="rounded-lg bg-card text-card-foreground flex flex-col overflow-hidden border hover:shadow-lg transition-all h-full">
             {/* Media Preview */}
-            <a href={`/projects/${project.slug}`}>
+            <MediaWrapper>
                 {project.video.endsWith(".mp4") ? (
                     <video
                         src={project.video}
@@ -19,8 +27,7 @@ function ProjectCard({ project }: { project: any }) {
                         className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
                     />
                 )}
-            </a>
-
+            </MediaWrapper>
 
             {/* Title + Description */}
             <div className="flex flex-col px-2">
@@ -29,7 +36,9 @@ function ProjectCard({ project }: { project: any }) {
                         {project.title}
                     </h3>
 
-                    <time className="font-sans text-xs">{project.dates}</time>
+                    {project.dates && (
+                        <time className="font-sans text-xs">{project.dates}</time>
+                    )}
 
                     <p className="prose max-w-full text-xs text-muted-foreground">
                         {project.description}
@@ -67,4 +76,5 @@ function ProjectCard({ project }: { project: any }) {
         </div>
     );
 }
+
 export default ProjectCard;

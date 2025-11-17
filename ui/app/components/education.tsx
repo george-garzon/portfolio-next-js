@@ -8,8 +8,8 @@ const educationData = [
     {
         school: "University of South Florida",
         img: "/usouthflorida_logo.jpg",
-        dates: "August 2020 - May 2024",
-        degree: "B.S in Computer Science with Honors",
+        dates: "August 2017 - May 2020",
+        degree: "Bachelors of Science in Marketing",
         notes: null,
         details: (
             <div className="mt-2 text-xs sm:text-sm">
@@ -17,15 +17,15 @@ const educationData = [
                     <strong>Minor:</strong> Entrepreneurship
                 </p>
 
-                <div>
-                    <strong>Honors:</strong>
-                    <ul className="list-disc list-inside">
-                        <li>Summa Cum Laude</li>
-                        <li>New American University Scholar</li>
-                        <li>Barrett, The Honors College</li>
-                        <li>Dean's List</li>
-                    </ul>
-                </div>
+                {/*<div>*/}
+                {/*    <strong>Honors:</strong>*/}
+                {/*    <ul className="list-disc list-inside">*/}
+                {/*        <li>Summa Cum Laude</li>*/}
+                {/*        <li>New American University Scholar</li>*/}
+                {/*        <li>Barrett, The Honors College</li>*/}
+                {/*        <li>Dean's List</li>*/}
+                {/*    </ul>*/}
+                {/*</div>*/}
             </div>
         ),
     },

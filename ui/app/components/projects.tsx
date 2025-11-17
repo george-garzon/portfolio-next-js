@@ -4,9 +4,7 @@ import ProjectCard from "./projects/project-card";
 const projects = [
     {
         title: "Ship Tracker",
-        slug: "agentml",
         video: "/shiptrackergif.gif",
-        dates: "October 2023 - December 2023",
         description:
             "Apple Maps themed Ship Tracker built for Royal Caribbean.",
         tags: [
@@ -24,16 +22,15 @@ const projects = [
     },
     {
         title: "Homeport Travel",
-        slug: "homeport",
         video: "/homeportblog.gif",
-        dates: "March 2023 - May 2023",
         description:
-            "Cruise Blog",
+            "Keeping travelers up to date with cruising. Modernizing the Travel Agent Booking process with Royal Caribbean API.",
         tags: [
             "Next.js",
             "React",
             "Tailwind CSS",
             "TypeScript",
+            "Nuqs",
         ],
         links: [
             {
@@ -44,7 +41,6 @@ const projects = [
     },
     {
         title: "Arcfield Chat Bot",
-        slug: "mbse",
         video: "/mbse.gif",
         description:
             "AI ChatGPT Wrapper.",
@@ -56,9 +52,23 @@ const projects = [
         ],
         links: [
             {
-                label: "Research Paper",
-                href: "/",
+                label: "Github",
+                href: "https://github.com/george-garzon",
             },
+        ],
+    },
+    {
+        title: "DrScriptPortal Frontend",
+        video: "/drscript.png",
+        description:
+            "Transformed a pharmaceutical e-commerce UI into a clean, modern, mobile-friendly experience.",
+        tags: [
+            "Next.js",
+            "React",
+            "Tailwind CSS",
+            "TypeScript",
+        ],
+        links: [
             {
                 label: "Github",
                 href: "https://github.com/george-garzon",
@@ -66,8 +76,7 @@ const projects = [
         ],
     },
     {
-        title: "About",
-        slug: "about",
+        title: "About Me",
         video: "/about-angular.gif",
         description:
             "About me one page application crafted with Angular CLI.",
