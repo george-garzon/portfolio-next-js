@@ -9,7 +9,7 @@ export default function About() {
 
             <FadeIn>
                 <div className="prose max-w-full text-sm text-muted-foreground dark:prose-invert whitespace-pre-wrap">
-                    <p>With over half a decade of development experience, I specialize in frontend and backend web applications. Have worked on small-large-scale API integrations. Designed beautiful data tables. Managed team members conducted code reviews, self-hosted with docker. I’ve worked closely with teams and departments collaborating to gain a better perspective and deliver a more efficient product.</p>
+                    <p>With 5+ years of development experience, I build everything from clean frontends to reliable backend systems. I’ve integrated complex APIs, designed beautiful data tables, and led teams through code reviews and best practices.</p>
                 </div>
             </FadeIn>
         </section>
