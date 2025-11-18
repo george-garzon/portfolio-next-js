@@ -28,18 +28,49 @@ function ProjectCard({ project }: { project: any }) {
                 )}
             </MediaWrapper>
 
+            {/* Title + Description */}
             <div className="flex flex-col px-2">
                 <div className="space-y-1">
                     <h3 className="font-semibold tracking-tight mt-1 text-base">
                         {project.title}
                     </h3>
 
-                    <time className="font-sans text-xs">{project.dates}</time>
+                    {project.dates && (
+                        <time className="font-sans text-xs">{project.dates}</time>
+                    )}
 
-                    <p className="prose max-w-full text-sm text-muted-foreground">
+                    <p className="prose max-w-full text-xs text-muted-foreground">
                         {project.description}
                     </p>
                 </div>
+            </div>
+
+            {/* Tags */}
+            <div className="text-sm text-muted-foreground mt-auto flex flex-col px-2">
+                <div className="mt-2 flex flex-wrap gap-1 text-[10px]">
+                    {project.tags.map((tag: string) => (
+                        <div
+                            key={tag}
+                            className="inline-flex items-center rounded-md px-1 py-0 bg-secondary text-secondary-foreground hover:bg-secondary/80 font-semibold border-transparent border text-[10px]"
+                        >
+                            {tag}
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            {/* Footer Links */}
+            <div className="flex items-center gap-1 pt-2 px-2 pb-2">
+                {project.links.map((link: any) => (
+                    <a
+                        key={link.label}
+                        target="_blank"
+                        href={link.href}
+                        className="flex items-center gap-2 px-2 py-1 text-[10px] rounded-md bg-primary text-primary-foreground shadow hover:bg-primary/80"
+                    >
+                        {link.label}
+                    </a>
+                ))}
             </div>
         </div>
     );
