@@ -70,7 +70,7 @@ export default function FloatingNav() {
         {
             type: "link",
             label: "X",
-            href: "https://x.com",
+            href: "https://x.com/georgegarzon_",
             icon: <XIcon />,
         },
         { type: "divider" },
