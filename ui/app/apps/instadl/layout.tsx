@@ -9,6 +9,7 @@ export default function InstadlLayout({ children }: Readonly<{ children: React.R
                 </Link>
                 <div className="flex gap-4 text-sm text-muted-foreground">
                     <Link href="/apps/instadl/landing" className="hover:text-foreground">About</Link>
+                    <Link href="/apps/instadl/privacy" className="hover:text-foreground">Privacy</Link>
                     <Link href="/apps/instadl/support" className="hover:text-foreground">Support</Link>
                 </div>
             </nav>
