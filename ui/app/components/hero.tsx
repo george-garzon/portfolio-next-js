@@ -9,13 +9,13 @@ export default function Hero() {
                         <div className="flex-col flex flex-1 space-y-1.5">
                             <FadeIn>
                 <span className="inline-block text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl">
-                  Hi, I'm George 👋
+                  Hi, I&apos;m George 👋
                 </span>
                             </FadeIn>
 
                             <FadeIn>
                 <span className="inline-block max-w-[600px] md:text-xl">
-                  Full Stack Developer at Olympia Pharmaceuticals
+                  Full Stack Developer at Homeport Travel
                 </span>
                             </FadeIn>
                         </div>
