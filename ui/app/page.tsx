@@ -8,6 +8,7 @@ import Frameworks from "./components/frameworks";
 import Technologies from "./components/technologies";
 import Projects from "./components/projects";
 import Contact from "./components/contact";
+import Apps from "./components/apps";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
         <Languages />
         <Frameworks />
         <Technologies />
+        <Apps />
         <Projects />
         <Contact />
       </main>

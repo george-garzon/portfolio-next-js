@@ -6,11 +6,19 @@ import FadeIn from "./ui/fade-in";
 
 const workExperience = [
     {
+        company: "Homeport Travel",
+        href: "https://www.homeporttravel.com/",
+        img: "/hp.jpg",
+        role: "Full Stack Developer",
+        dates: "2022 - Present",
+        summary: "Built and containerized Homeport’s full-stack platform using React, Node.js, and CodeIgniter 4, integrating real-time cruise data, modular UI systems, business intelligence dashboards, and AWS SES—delivering a scalable, data-driven travel application.",
+    },
+    {
         company: "Olympia Pharmacy",
         href: "https://www.olympiapharmacy.com/",
         img: "/olympiapharma_logo.jpg",
         role: "Senior Full Stack Developer",
-        dates: "2025 - Present",
+        dates: "2025 - March 2026",
         summary: "Architecting and modernizing the Olympia Ordering Portal by transforming a legacy LAMP/CodeIgniter 3 system into a scalable, high-performance platform using PHP, optimized SQL, AWS, Cloudflare, and a new Next.js + Tailwind component-driven frontend.",
     },
     {
@@ -20,14 +28,6 @@ const workExperience = [
         role: "Quality Assurance Developer",
         dates: "2024 - 2025",
         summary: "Delivered high-impact QA efficiency boosts, and internal tools—improving stability, speeding onboarding, and optimizing prescription printing, order tracking, and API reliability across the Olympia Ordering Portal.",
-    },
-    {
-        company: "Homeport Travel",
-        href: "https://www.homeporttravel.com/",
-        img: "/hp.jpg",
-        role: "Full Stack Developer",
-        dates: "2022 - Present",
-        summary: "Built and containerized Homeport’s full-stack platform using React, Node.js, and CodeIgniter 4, integrating real-time cruise data, modular UI systems, business intelligence dashboards, and AWS SES—delivering a scalable, data-driven travel application.",
     },
     {
         company: "Electric Supply, Inc.",
