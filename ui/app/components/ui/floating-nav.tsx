@@ -4,9 +4,6 @@ import { useState, useRef } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
     Home01Icon,
-    GithubIcon,
-    Linkedin02Icon,
-    NewTwitterIcon,
     Sun01Icon,
     Moon01Icon,
     SourceCodeIcon,
@@ -60,25 +57,6 @@ export default function FloatingNav() {
             label: "Blog",
             href: "/blog",
             icon: <BlogIcon />,
-        },
-        { type: "divider" },
-        {
-            type: "link",
-            label: "GitHub",
-            href: "https://github.com/george-garzon",
-            icon: <GitHubIcon />,
-        },
-        {
-            type: "link",
-            label: "LinkedIn",
-            href: "https://linkedin.com/in/georgegarzon",
-            icon: <LinkedInIcon />,
-        },
-        {
-            type: "link",
-            label: "X",
-            href: "https://x.com/georgegarzon_",
-            icon: <XIcon />,
         },
         { type: "divider" },
         {
@@ -180,18 +158,6 @@ function LiquidItem({
 /* ------------------------------------------------------------ */
 /* Icons */
 /* ------------------------------------------------------------ */
-
-function GitHubIcon() {
-    return <HugeiconsIcon icon={GithubIcon} size={20} />;
-}
-
-function LinkedInIcon() {
-    return <HugeiconsIcon icon={Linkedin02Icon} size={20} />;
-}
-
-function XIcon() {
-    return <HugeiconsIcon icon={NewTwitterIcon} size={20} />;
-}
 
 function SunIcon() {
     return <HugeiconsIcon icon={Sun01Icon} size={20} />;

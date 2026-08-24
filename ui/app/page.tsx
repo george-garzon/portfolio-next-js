@@ -1,4 +1,5 @@
 import Hero from "./components/hero";
+import SocialLinks from "./components/social-links";
 import About from "./components/about";
 import Work from "./components/work";
 import Education from "./components/education";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
       <main className="flex flex-col min-h-[100dvh] space-y-10">
         <Hero />
+        <SocialLinks />
         <About />
         <Work />
         <Education />
