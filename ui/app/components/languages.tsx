@@ -7,6 +7,7 @@ export default function Languages() {
         "TypeScript",
         "Python",
         "PHP",
+        "Dart",
         "Bash",
         "HTML5",
         "CSS3",

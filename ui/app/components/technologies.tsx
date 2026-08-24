@@ -10,6 +10,7 @@ export default function Technologies() {
         "NPM",
         "Postman",
         "Swagger / OpenAPI",
+        "LLM APIs",
         "Selenium",
         "Jenkins",
         "MySQL",

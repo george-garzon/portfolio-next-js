@@ -1,32 +1,39 @@
-function ProjectCard({ project }: { project: any }) {
-    // A tiny wrapper helper
-    const MediaWrapper = ({ children }: { children: React.ReactNode }) =>
-        project.slug ? (
-            <a href={`/projects/${project.slug}`}>{children}</a>
-        ) : (
-            <>{children}</>
-        );
+interface ProjectLink {
+    label: string;
+    href: string;
+}
+
+interface Project {
+    title: string;
+    video: string;
+    description: string;
+    tags: string[];
+    links: ProjectLink[];
+    dates?: string;
+    slug?: string;
+}
+
+function ProjectCard({ project }: { project: Project }) {
+    const media = project.video.endsWith(".mp4") ? (
+        <video
+            src={project.video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
+        />
+    ) : (
+        <img
+            src={project.video}
+            alt={project.title}
+            className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
+        />
+    );
 
     return (
         <div className="rounded-lg bg-card text-card-foreground flex flex-col overflow-hidden border hover:shadow-lg transition-all h-full">
-            <MediaWrapper>
-                {project.video.endsWith(".mp4") ? (
-                    <video
-                        src={project.video}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
-                    />
-                ) : (
-                    <img
-                        src={project.video}
-                        alt={project.title}
-                        className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
-                    />
-                )}
-            </MediaWrapper>
+            {project.slug ? <a href={`/projects/${project.slug}`}>{media}</a> : media}
 
             {/* Title + Description */}
             <div className="flex flex-col px-2">
@@ -48,7 +55,7 @@ function ProjectCard({ project }: { project: any }) {
             {/* Tags */}
             <div className="text-sm text-muted-foreground mt-auto flex flex-col px-2">
                 <div className="mt-2 flex flex-wrap gap-1 text-[10px]">
-                    {project.tags.map((tag: string) => (
+                    {project.tags.map((tag) => (
                         <div
                             key={tag}
                             className="inline-flex items-center rounded-md px-1 py-0 bg-secondary text-secondary-foreground hover:bg-secondary/80 font-semibold border-transparent border text-[10px]"
@@ -61,10 +68,11 @@ function ProjectCard({ project }: { project: any }) {
 
             {/* Footer Links */}
             <div className="flex items-center gap-1 pt-2 px-2 pb-2">
-                {project.links.map((link: any) => (
+                {project.links.map((link) => (
                     <a
                         key={link.label}
                         target="_blank"
+                        rel="noreferrer"
                         href={link.href}
                         className="flex items-center gap-2 px-2 py-1 text-[10px] rounded-md bg-primary text-primary-foreground shadow hover:bg-primary/80"
                     >

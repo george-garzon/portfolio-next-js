@@ -5,10 +5,12 @@ export default function Skills() {
     const list = [
         "Web Development",
         "API Development",
+        "AI / LLM Workflows",
         "Database Design",
         "DevOps / CI/CD",
         "Automation Testing",
         "UI/UX Implementation",
+        "Mobile Development",
         "Containerization",
         "System Design",
         "Version Control (Git)",

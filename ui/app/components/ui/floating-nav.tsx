@@ -10,6 +10,7 @@ import {
     Sun01Icon,
     Moon01Icon,
     SourceCodeIcon,
+    NewsIcon,
 } from "@hugeicons/core-free-icons";
 import Link from "next/link";
 import {
@@ -53,6 +54,12 @@ export default function FloatingNav() {
             label: "Projects",
             href: "/projects",
             icon: <CodeIcon />,
+        },
+        {
+            type: "link",
+            label: "Blog",
+            href: "/blog",
+            icon: <BlogIcon />,
         },
         { type: "divider" },
         {
@@ -196,4 +203,8 @@ function MoonIcon() {
 
 function CodeIcon() {
     return <HugeiconsIcon icon={SourceCodeIcon} size={20} />;
+}
+
+function BlogIcon() {
+    return <HugeiconsIcon icon={NewsIcon} size={20} />;
 }
