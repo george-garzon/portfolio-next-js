@@ -5,6 +5,7 @@ export default function Frameworks() {
     const list = [
         "Next.js",
         "React",
+        "Flutter",
         "Vue.js",
         "Tailwind CSS",
         "CodeIgniter",

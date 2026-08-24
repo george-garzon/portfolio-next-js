@@ -113,7 +113,7 @@ export default function Projects() {
                             </h2>
 
                             <p className="text-muted-foreground md:text-xl lg:text-base xl:text-xl max-w-[600px] mx-auto">
-                                I've worked on a variety of projects, from simple websites to
+                                I&apos;ve worked on a variety of projects, from simple websites to
                                 complex web applications. Here are a few of my favorites.
                             </p>
                         </div>
