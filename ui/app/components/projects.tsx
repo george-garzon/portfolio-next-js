@@ -3,6 +3,43 @@ import ProjectCard from "./projects/project-card";
 
 const projects = [
     {
+        title: "Practella",
+        video: "/practella.png",
+        description:
+            "A growth platform for chiropractic practices, bringing lead capture, patient engagement, and automated workflows into one workspace.",
+        tags: [
+            "Next.js",
+            "React",
+            "CRM",
+            "Workflow Automation",
+        ],
+        links: [
+            {
+                label: "Website",
+                href: "https://practella.com",
+            },
+        ],
+    },
+    {
+        title: "Apartment Complex UX/UI",
+        video: "/apartment-complex.mp4",
+        poster: "/apartment-complex.png",
+        description:
+            "A modern UX/UI experience for ContraVest, showcasing apartment communities with immersive visuals and intuitive navigation.",
+        tags: [
+            "Next.js",
+            "React",
+            "UX/UI",
+            "Web Design",
+        ],
+        links: [
+            {
+                label: "Website",
+                href: "https://contravest.garzn.com/",
+            },
+        ],
+    },
+    {
         title: "Ship Tracker",
         video: "/shiptrackergif.gif",
         description:
