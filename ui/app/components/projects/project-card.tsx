@@ -6,6 +6,7 @@ interface ProjectLink {
 interface Project {
     title: string;
     video: string;
+    poster?: string;
     description: string;
     tags: string[];
     links: ProjectLink[];
@@ -17,6 +18,8 @@ function ProjectCard({ project }: { project: Project }) {
     const media = project.video.endsWith(".mp4") ? (
         <video
             src={project.video}
+            poster={project.poster}
+            aria-label={project.title}
             autoPlay
             loop
             muted
